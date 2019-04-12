@@ -91,4 +91,6 @@ typings/
 # VSCode settings
 .vscode
 
+tmp
+
 # End of https://www.gitignore.io/api/node
