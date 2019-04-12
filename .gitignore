@@ -91,6 +91,10 @@ typings/
 # VSCode settings
 .vscode
 
-tmp/*.*
+# exclude everything
+tmp/*
+
+# exception to the rule
+!tmp/.gitkeep 
 
 # End of https://www.gitignore.io/api/node
