@@ -8,6 +8,8 @@ class FileController {
     const file = await File.create({ title: req.file.originalname, path: req.file.key });
     box.files.push(file);
     await box.save();
+    // eslint-disable-next-line no-underscore-dangle
+    req.io.sockets.in(box._id).emit('file', file);
     return res.send(file);
   }
 }
